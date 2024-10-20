@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Count in Words</title>
+</head>
+<body>
+    <h1>Vowel Count in Words</h1>
+    <ul id="wordList"></ul>
+
+    <script>
+     
+        const words = ["apple", "banana", "grape"];
+
+function displayVowelCount(wordsArray) {
+ 
+    const ul = document.getElementById('wordList');
+    
+  
+     wordsArray.map(word => {
+       
+        const vowelCount = (word.match(/[aeiou]/gi) || []).length;
+        
+    
+        const li = document.createElement('li');
+        
+    
+        li.textContent = `${word} (${vowelCount} vowels)`;
+        
+      
+        ul.appendChild(li);
+    });
+}
+
+
+displayVowelCount(words);
+
+    </script>
+</body>
+</html>
