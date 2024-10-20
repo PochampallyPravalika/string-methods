@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=["dog", "cat", "bird", "fish"]
+        let reversearr=arr.map(word=>word.split('').reverse().join(''))
+        let ul=document.createElement('ul')
+        reversearr.forEach(reversearr=>{
+            let li=document.createElement('li')
+            li.innerText=reversearr;
+            ul.appendChild(li)
+        })
+        document.body.append(ul)
+    </script>
+</body>
+</html>
